@@ -1,0 +1,44 @@
+{
+  "name": "@robertdevore/agent-skills",
+  "version": "0.1.0",
+  "description": "Install reusable, tool-agnostic AI agent skills with one-line npx commands.",
+  "keywords": [
+    "ai",
+    "agent",
+    "skills",
+    "claude",
+    "codex",
+    "cursor",
+    "cli",
+    "prompt"
+  ],
+  "license": "MIT",
+  "author": "Robert DeVore <deviodigital@gmail.com>",
+  "homepage": "https://github.com/robertdevore/agent-skills#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertdevore/agent-skills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robertdevore/agent-skills/issues"
+  },
+  "bin": {
+    "agent-skills": "bin/agent-skills.js"
+  },
+  "files": [
+    "bin",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/cli.test.js",
+    "check": "node --check bin/agent-skills.js && node bin/agent-skills.js list"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
