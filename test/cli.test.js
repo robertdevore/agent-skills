@@ -38,15 +38,7 @@ function tmpDir() {
   return fs.mkdtempSync(path.join(os.tmpdir(), 'agent-skills-test-'));
 }
 
-const EXPECTED = [
-  'compact-final',
-  'handoff-writer',
-  'orwell-writing',
-  'quiet-benchmark',
-  'review-first',
-  'scope-lock',
-  'smalltalksucks'
-];
+const EXPECTED = ['orwell-writing', 'smalltalksucks'];
 
 test('help prints usage', function () {
   const out = run(['help']);
@@ -66,6 +58,14 @@ test('list shows all bundled skills', function () {
   EXPECTED.forEach(function (name) {
     assert.ok(out.indexOf(name) !== -1, 'missing ' + name + ' in list');
   });
+});
+
+test('only the public skills are bundled', function () {
+  const actual = fs.readdirSync(SKILLS_DIR, { withFileTypes: true })
+    .filter(function (entry) { return entry.isDirectory(); })
+    .map(function (entry) { return entry.name; })
+    .sort();
+  assert.deepStrictEqual(actual, EXPECTED);
 });
 
 test('every bundled skill has valid frontmatter', function () {

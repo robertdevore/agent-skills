@@ -214,11 +214,11 @@ function cmdHelp() {
     'Examples:',
     '  npx @robertdevore/agent-skills list',
     '  npx @robertdevore/agent-skills install smalltalksucks',
-    '  npx @robertdevore/agent-skills install compact-final',
+    '  npx @robertdevore/agent-skills install orwell-writing',
     '  npx @robertdevore/agent-skills install all',
-    '  npx @robertdevore/agent-skills install scope-lock --target ./.agents/skills',
+    '  npx @robertdevore/agent-skills install orwell-writing --target ./.agents/skills',
     '  npx @robertdevore/agent-skills install all --dry-run',
-    '  npx @robertdevore/agent-skills install review-first --force',
+    '  npx @robertdevore/agent-skills install smalltalksucks --force',
     ''
   ].join('\n'));
   return 0;
