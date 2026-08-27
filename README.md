@@ -1,6 +1,6 @@
 # agent-skills
 
-Two reusable, tool-agnostic AI agent skills you can install with a single `npx` command.
+Reusable, tool-agnostic AI agent skills you can install with a single `npx` command.
 
 Each skill is a plain `SKILL.md` file with YAML frontmatter. The CLI just copies the skills you pick into a skills directory (default `~/.agents/skills`), where your coding agent can pick them up.
 
