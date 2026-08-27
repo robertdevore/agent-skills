@@ -41,6 +41,7 @@ function tmpDir() {
 const EXPECTED = [
   'compact-final',
   'handoff-writer',
+  'orwell-writing',
   'quiet-benchmark',
   'review-first',
   'scope-lock',

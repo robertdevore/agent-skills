@@ -42,6 +42,7 @@ By default skills are copied into `~/.agents/skills`.
 | `review-first` | Code reviews that lead with findings ordered by severity, with file refs. |
 | `handoff-writer` | Write an end-of-session handoff another agent can pick up. |
 | `quiet-benchmark` | Compare a normal vs. quiet agent run on the same task. |
+| `orwell-writing` | Write and edit clear, direct prose with plain words and useful detail. |
 
 Run `agent-skills list` for the live list and one-line descriptions.
 
