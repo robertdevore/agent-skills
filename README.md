@@ -85,16 +85,17 @@ npm test       # run the CLI test suite
 npm run check  # syntax-check the CLI and list skills
 ```
 
-## Publish to npm
+## Publish updates to npm
 
-The package is ready for its first public release. Before publishing, confirm the package name is available on npm, then run:
+After making changes, bump the version, push the release tag, and publish:
 
 ```sh
-npm login
+npm version patch
+git push --follow-tags
 npm publish --access public
 ```
 
-The package is scoped, so `--access public` is required for the first release. `publishConfig.access` is already set for later releases.
+The package is scoped. Keep `--access public` when publishing updates; `publishConfig.access` is also set to `public`.
 
 ## License
 
